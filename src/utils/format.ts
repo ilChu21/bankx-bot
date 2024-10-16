@@ -6,17 +6,3 @@ export const roundDown = (num: number, decimals: number): string => {
     maximumFractionDigits: decimals,
   });
 };
-
-export const formatNumberWithSuffix = (value: number): string => {
-  const suffixes = ['', 'K', 'M', 'B', 'T'];
-
-  let formattedValue = value;
-  let suffixIndex = 0;
-
-  while (formattedValue >= 1000) {
-    formattedValue /= 1000;
-    suffixIndex++;
-  }
-
-  return `${formattedValue.toFixed(3)}${suffixes[suffixIndex]}`;
-};
