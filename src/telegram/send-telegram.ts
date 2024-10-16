@@ -12,5 +12,7 @@ export const sendBankxMsgs = async (): Promise<void> => {
     await bot.sendMessage(BANKX_CHAT_ID, bankXMessage, opts());
   }
 
-  await bot.sendMessage(CHAT_ID, bankXMessage, opts());
+  const sentMsg = await bot.sendMessage(CHAT_ID, bankXMessage, opts());
+  const lastSentMessageId = sentMsg.message_id;
+  await bot.deleteMessage(CHAT_ID, lastSentMessageId - 1);
 };
