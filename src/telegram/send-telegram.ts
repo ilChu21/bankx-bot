@@ -8,7 +8,7 @@ export const sendBankxMsgs = async (): Promise<void> => {
   const data = await getBlockchainData();
   const bankXMessage = bankXMsg(data);
 
-  if (isDayAt(3, 18, 0o0)) {
+  if (isDayAt(3, 19, 0o0)) {
     await bot.sendMessage(BANKX_CHAT_ID, bankXMessage, opts());
   }
 
