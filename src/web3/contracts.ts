@@ -15,31 +15,31 @@ export const contracts = {
     abi: chainlinkAbi,
   },
   pidBsc: {
-    address: '0x9Bca6740c6283b97aa2030715C88932D6D1e215E',
+    address: '0xF441252DE7972B269cE954d82bE8b127a815Ecfb',
     abi: pidAbi,
   },
   pidEth: {
-    address: '0x7942418efD38dd2e0C6E13574C168B3d2E7C0A3E',
-    abi: pidAbi,
-  },
-  pidArbitrum: {
-    address: '0x8DA85B822aC8767F6A987F0A662039734CC4f066',
-    abi: pidAbi,
-  },
-  pidPolygon: {
-    address: '0x016357A87EEf79BdC03B613FB4415c1486905977',
-    abi: pidAbi,
-  },
-  pidOptimism: {
     address: '0x5997a08fD19bB3E397b25d41c1c10D2F2E0299F7',
     abi: pidAbi,
   },
+  pidArbitrum: {
+    address: '0x75c72ea2925aE17c59B2e9fD7651f986fAF1673f',
+    abi: pidAbi,
+  },
+  pidPolygon: {
+    address: '0xCedfEb69C150AD62A164C5B0bc55718913F9b0D8',
+    abi: pidAbi,
+  },
+  pidOptimism: {
+    address: '0x3f83f15521643De6aEFe7A16571332180bf09cD1',
+    abi: pidAbi,
+  },
   pidAvalanche: {
-    address: '0x202f7F598765b78Ed53a268CCe4a4C9d1b391015',
+    address: '0xb2ae29742A350F924b870E4aDBAbb967f5DeE8d4',
     abi: pidAbi,
   },
   pidFantom: {
-    address: '0x821327C122C4AA2314393785ABf5Af7Fb04F7A58',
+    address: '0x41e9f4c0E1882B69834Af8f01b951384EbE0EbCD',
     abi: pidAbi,
   },
 } as const;
