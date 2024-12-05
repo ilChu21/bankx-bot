@@ -1,5 +1,22 @@
 import { SendMessageOptions } from 'node-telegram-bot-api';
 
+export const retryOperation = async <T>(
+  operation: () => Promise<T>,
+  maxAttempts: number
+): Promise<T> => {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await operation();
+    } catch (error) {
+      if (attempt < maxAttempts) {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+      }
+    }
+  }
+
+  throw new Error(`Operation failed after ${maxAttempts} attempts`);
+};
+
 export const isDayAt = (
   dayOfWeek: number,
   hour: number,
